@@ -1,0 +1,40 @@
+---
+export interface Props {
+  id?: string;
+}
+
+const { id = "about" } = Astro.props;
+---
+
+<section id={id} class="py-16 bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+      <h4 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-8">
+        About Real World PDR
+      </h4>
+      
+      <div class="space-y-6 text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
+        <p>
+          Real World PDR was born from the desire to teach people who want to get into the Paintless Dent Repair industry how to provide the best possible service to their customers.
+        </p>
+        
+        <p>
+          We don't just show you how to repair a dent in a lab. We want you to be confident that the skills you learn with us Real World PDR will translate to real life.
+        </p>
+        
+        <p>
+          PDR is not easy, it will require a lot of practice and patience. But we're with you every step of the way, from what tools you need to buy, all the way through the most advanced dents and creases.
+        </p>
+      </div>
+      
+      <div class="mt-10">
+        <a 
+          href="https://realworldpdr.com/real-world-pdr-courses/"
+          class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 text-lg"
+        >
+          See Courses
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

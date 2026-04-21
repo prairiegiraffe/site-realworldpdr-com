@@ -1,0 +1,19 @@
+---
+interface Props {
+  errorCode?: string;
+  errorMessage?: string;
+}
+
+const { errorCode = "404", errorMessage = "Not Found" } = Astro.props;
+---
+
+<section class="flex items-center justify-center min-h-screen bg-white">
+  <div class="flex items-center">
+    <span class="px-4 text-lg text-gray-500 border-r border-gray-400 tracking-wider">
+      {errorCode}
+    </span>
+    <span class="ml-4 text-lg text-gray-500 uppercase tracking-wider">
+      {errorMessage}
+    </span>
+  </div>
+</section>

@@ -1,0 +1,26 @@
+---
+export interface Props {
+  id?: string;
+}
+
+const { id = "course-2" } = Astro.props;
+---
+
+<section id={id} class="py-16 px-4 bg-gray-50">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+      All Of Our Best Content, Updated Monthly
+    </h2>
+    
+    <p class="text-lg text-gray-700 mb-8 leading-relaxed max-w-3xl mx-auto">
+      Everything you could need to gain the knowledge to jumpstart your PDR career. Beginner to "super advanced" near impossible repairs covered here. Only 65 bucks gets you access to every one of our lessons including our newest and best content.
+    </p>
+    
+    <a 
+      href="https://realworldpdr.com/real-world-pdr-monthly/"
+      class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
+    >
+      Read More
+    </a>
+  </div>
+</section>

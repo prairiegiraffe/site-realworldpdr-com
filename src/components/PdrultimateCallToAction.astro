@@ -1,0 +1,56 @@
+---
+export interface Props {
+  content?: Array<{
+    type: string;
+    value: string;
+    props?: any;
+  }>;
+}
+
+const { content } = Astro.props;
+
+const imageItem = content?.find(item => item.type === 'image');
+const headingItem = content?.find(item => item.type === 'heading');
+const textItem = content?.find(item => item.type === 'text');
+const buttonItem = content?.find(item => item.type === 'button');
+---
+
+<section class="relative bg-gray-900 py-16 lg:py-24 overflow-hidden">
+  <!-- Background Image -->
+  {imageItem && (
+    <div class="absolute inset-0">
+      <img
+        src={imageItem.value}
+        alt={imageItem.props?.alt || ''}
+        class="w-full h-full object-cover opacity-40"
+      />
+      <div class="absolute inset-0 bg-gray-900 bg-opacity-60"></div>
+    </div>
+  )}
+  
+  <!-- Content -->
+  <div class="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div class="max-w-3xl mx-auto">
+      {headingItem && (
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+          {headingItem.value}
+        </h2>
+      )}
+      
+      {textItem && (
+        <p class="text-lg sm:text-xl text-gray-200 mb-8 leading-relaxed">
+          {textItem.value}
+        </p>
+      )}
+      
+      {buttonItem && (
+        <a
+          href={buttonItem.props?.href}
+          class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+        >
+          {buttonItem.value}
+        </a>
+      )}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,104 @@
+---
+interface Props {
+  className?: string;
+}
+
+const { className = '' } = Astro.props;
+---
+
+<section class={`py-16 px-4 bg-white ${className}`}>
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-4xl font-bold text-gray-900 mb-4 text-center">Real World PDR 101</h2>
+    <h3 class="text-2xl font-semibold text-gray-800 mb-8 text-center">Course curriculum</h3>
+    
+    <div class="accordion-container space-y-4">
+      <!-- Instructions Accordion Item -->
+      <div class="border border-gray-200 rounded-lg overflow-hidden">
+        <button class="accordion-trigger w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 flex justify-between items-center transition-colors">
+          <span class="font-semibold text-gray-900">Instructions for this course</span>
+          <svg class="accordion-icon w-5 h-5 text-gray-600 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div class="accordion-content hidden px-6 py-4 bg-white border-t border-gray-200">
+          <ul class="space-y-2">
+            <li class="flex items-start">
+              <span class="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+              <span class="text-gray-700">How to Use the PDR 101</span>
+            </li>
+            <li class="flex items-start">
+              <span class="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+              <span class="text-gray-700">HOW TO USE REAL WORLD PDR</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Welcome to PDR 101 Accordion Item -->
+      <div class="border border-gray-200 rounded-lg overflow-hidden">
+        <button class="accordion-trigger w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 flex justify-between items-center transition-colors">
+          <span class="font-semibold text-gray-900">Welcome to PDR 101</span>
+          <svg class="accordion-icon w-5 h-5 text-gray-600 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div class="accordion-content hidden px-6 py-4 bg-white border-t border-gray-200">
+          <ul class="space-y-2">
+            <li class="flex items-start">
+              <span class="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+              <span class="text-gray-700">PDR 101</span>
+            </li>
+            <li class="flex items-start">
+              <span class="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+              <span class="text-gray-700">Glue Pulling with a Slide Hammer</span>
+            </li>
+            <li class="flex items-start">
+              <span class="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+              <span class="text-gray-700">Light Crease Glue Pull</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-8 text-center">
+      <a href="https://realworldpdr.thinkific.com/cart/add_product/445811?price_id=467088" 
+         class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors duration-200 uppercase tracking-wide">
+        Buy The Course
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const accordionTriggers = document.querySelectorAll('.accordion-trigger');
+    
+    accordionTriggers.forEach(trigger => {
+      trigger.addEventListener('click', function() {
+        const content = this.nextElementSibling;
+        const icon = this.querySelector('.accordion-icon');
+        const isOpen = !content.classList.contains('hidden');
+        
+        // Close all other accordion items
+        accordionTriggers.forEach(otherTrigger => {
+          if (otherTrigger !== this) {
+            const otherContent = otherTrigger.nextElementSibling;
+            const otherIcon = otherTrigger.querySelector('.accordion-icon');
+            otherContent.classList.add('hidden');
+            otherIcon.style.transform = 'rotate(0deg)';
+          }
+        });
+        
+        // Toggle current accordion item
+        if (isOpen) {
+          content.classList.add('hidden');
+          icon.style.transform = 'rotate(0deg)';
+        } else {
+          content.classList.remove('hidden');
+          icon.style.transform = 'rotate(180deg)';
+        }
+      });
+    });
+  });
+</script>

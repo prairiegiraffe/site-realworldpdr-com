@@ -1,0 +1,84 @@
+---
+interface Props {
+  className?: string;
+}
+
+const { className = '' } = Astro.props;
+---
+
+<section class={`py-16 bg-white ${className}`}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <!-- Content Column -->
+      <div class="space-y-8">
+        <h3 class="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
+          Sharpen your skills and get on the path to your exciting PDR career today
+        </h3>
+        
+        <div class="space-y-6">
+          <!-- Benefit 1 -->
+          <div class="flex items-start space-x-4">
+            <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+              <i class="far fa-clock text-blue-600 text-xl"></i>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-gray-900 mb-2">Learn PDR Quickly</h4>
+              <p class="text-gray-600">High-quality videos show you the most effective techniques.</p>
+            </div>
+          </div>
+
+          <!-- Benefit 2 -->
+          <div class="flex items-start space-x-4">
+            <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+              <i class="far fa-question-circle text-blue-600 text-xl"></i>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-gray-900 mb-2">Cut Out Guesswork</h4>
+              <p class="text-gray-600">We explain every step process so you don't have to wonder if you're doing it right.</p>
+            </div>
+          </div>
+
+          <!-- Benefit 3 -->
+          <div class="flex items-start space-x-4">
+            <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+              <i class="fas fa-check-double text-blue-600 text-xl"></i>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-gray-900 mb-2">Practice at your own pace</h4>
+              <p class="text-gray-600">Our online courses are designed for busy professionals who need to learn when the time is right for them.</p>
+            </div>
+          </div>
+
+          <!-- Benefit 4 -->
+          <div class="flex items-start space-x-4">
+            <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+              <i class="fas fa-thumbs-up text-blue-600 text-xl"></i>
+            </div>
+            <div>
+              <h4 class="text-xl font-semibold text-gray-900 mb-2">Become confident in your skills</h4>
+              <p class="text-gray-600">We teach you the foundations of PDR so you have to confidence to take on any dent.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-4">
+          <a 
+            href="https://realworldpdr.thinkific.com/cart/add_product/446304?price_id=467664"
+            class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors duration-200 uppercase tracking-wide"
+          >
+            Subscribe to PDR Ultimate
+          </a>
+        </div>
+      </div>
+
+      <!-- Image Column -->
+      <div class="lg:order-last">
+        <img 
+          src="/api/files/sites/proj_dkm43vn7/1776723863099/assets/mo7riisz4054l9.jpg" 
+          alt="" 
+          class="w-full h-auto rounded-lg shadow-lg"
+        />
+      </div>
+    </div>
+  </div>
+</section>
