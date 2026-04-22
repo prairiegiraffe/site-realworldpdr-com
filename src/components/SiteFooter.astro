@@ -1,16 +1,15 @@
 ---
 ---
 
-<footer class="relative">
-  <!-- Gold Footer Body -->
-  <div class="bg-[#E5CA00] relative">
-    <!-- SVG Shape Divider — slants down from left, overlaps content above -->
-    <div class="absolute top-0 left-0 w-full overflow-hidden leading-[0]" style="transform: translateY(-99%);">
-      <svg class="w-full block" viewBox="0 0 1000 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+<footer>
+  <div class="bg-[#E5CA00] relative pt-12">
+    <!-- SVG Shape Divider — gold slant peeking above the footer edge -->
+    <div class="absolute top-[-1px] left-0 w-full overflow-hidden leading-[0] h-[30px] pointer-events-none z-[2]">
+      <svg class="block w-[calc(100%+1.3px)] h-full relative left-1/2 -translate-x-1/2" style="transform: translateX(-50%) rotateY(180deg);" viewBox="0 0 1000 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0,6V0h1000v100L0,6z" fill="#E5CA00"></path>
       </svg>
     </div>
-    <div class="max-w-5xl mx-auto px-4 md:px-8 py-12 text-center">
+    <div class="max-w-5xl mx-auto px-4 md:px-8 pb-12 text-center">
       <!-- Logo -->
       <a href="/" class="inline-block mb-6">
         <img
