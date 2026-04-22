@@ -4,22 +4,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#720eec',
-        secondary: '#e9e6ed',
-        accent: '#61ce70',
-        background: '#ffffff',
-        text: '#1f2937',
+        gold: '#E5CA00',
+        dark: '#000000',
+        'gray-body': '#6A6865',
+        'gray-light': '#32373c',
+        'bg-dark': 'rgba(32, 7, 7, 0.8)',
       },
       fontFamily: {
-        heading: ['Arial', 'Helvetica', 'sans-serif'],
-        body: ['system-ui', '-apple-system', 'sans-serif'],
-      },
-      borderRadius: {
-        DEFAULT: '4px',
-        btn: '4px',
+        heading: ['system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Arial', 'sans-serif'],
+        body: ['system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Arial', 'sans-serif'],
       },
       maxWidth: {
-        container: '1020px',
+        container: '1140px',
       },
     },
   },
