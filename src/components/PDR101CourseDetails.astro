@@ -1,0 +1,128 @@
+---
+---
+
+<section class="elementor-section elementor-top-section elementor-section-content-middle elementor-section-full_width elementor-section-height-default py-16 bg-bg">
+  <div class="elementor-container max-w-[1020px] mx-auto px-4">
+    <div class="elementor-column w-full">
+      <div class="elementor-widget-wrap space-y-8">
+        
+        <!-- Main Heading -->
+        <div class="text-center">
+          <h2 class="elementor-heading-title text-3xl lg:text-4xl font-heading font-bold text-text mb-8">
+            Real World PDR 101
+          </h2>
+        </div>
+
+        <!-- Course Curriculum Heading -->
+        <div class="text-center">
+          <h3 class="elementor-heading-title text-2xl font-heading font-semibold text-text mb-8">
+            Course curriculum
+          </h3>
+        </div>
+
+        <!-- Accordion -->
+        <div class="elementor-accordion max-w-4xl mx-auto">
+          <div class="elementor-accordion-item border-b border-secondary">
+            <div class="elementor-tab-title py-4 px-6 cursor-pointer flex items-center justify-between bg-secondary hover:bg-gray-100 transition-colors" data-tab="1">
+              <a class="elementor-accordion-title text-lg font-medium text-text">Instructions for this course</a>
+              <span class="elementor-accordion-icon">
+                <i class="fas fa-angle-right transform transition-transform accordion-icon-closed"></i>
+                <i class="fas fa-angle-down transform transition-transform accordion-icon-opened hidden"></i>
+              </span>
+            </div>
+            <div class="elementor-tab-content px-6 py-0 overflow-hidden max-h-0 transition-all duration-300 accordion-content" data-tab="1">
+              <ul class="course-curriculum__chapter-content py-4 space-y-2">
+                <li class="text-text">How to Use the PDR 101</li>
+                <li class="text-text">HOW TO USE REAL WORLD PDR</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="elementor-accordion-item border-b border-secondary">
+            <div class="elementor-tab-title py-4 px-6 cursor-pointer flex items-center justify-between bg-secondary hover:bg-gray-100 transition-colors" data-tab="2">
+              <a class="elementor-accordion-title text-lg font-medium text-text">Welcome to PDR 101</a>
+              <span class="elementor-accordion-icon">
+                <i class="fas fa-angle-right transform transition-transform accordion-icon-closed"></i>
+                <i class="fas fa-angle-down transform transition-transform accordion-icon-opened hidden"></i>
+              </span>
+            </div>
+            <div class="elementor-tab-content px-6 py-0 overflow-hidden max-h-0 transition-all duration-300 accordion-content" data-tab="2">
+              <ul class="course-curriculum__chapter-content py-4 space-y-2">
+                <li class="text-text">
+                  <span class="course-curriculum__chapter-lesson">PDR 101</span>
+                </li>
+                <li class="text-text">
+                  <span class="course-curriculum__chapter-lesson flex items-center">
+                    <i class="icon-lesson mr-2"></i>Glue Pulling with a Slide Hammer
+                  </span>
+                </li>
+                <li class="text-text">
+                  <span class="course-curriculum__chapter-lesson flex items-center">
+                    <i class="icon-lesson mr-2"></i>Light Crease Glue Pull
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Buy Button -->
+        <div class="text-center mt-12">
+          <div class="elementor-button-wrapper">
+            <a 
+              href="https://realworldpdr.thinkific.com/cart/add_product/445811?price_id=467088"
+              class="elementor-button inline-flex items-center justify-center px-8 py-3 bg-primary text-white font-medium text-sm uppercase tracking-wider rounded transform hover:scale-105 transition-all duration-300 hover:shadow-lg"
+            >
+              <span class="elementor-button-content-wrapper">
+                <span class="elementor-button-text">Buy The Course</span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Accordion functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const accordionTitles = document.querySelectorAll('.elementor-tab-title');
+    
+    accordionTitles.forEach(title => {
+      title.addEventListener('click', function() {
+        const tab = this.dataset.tab;
+        const content = document.querySelector(`.elementor-tab-content[data-tab="${tab}"]`);
+        const closedIcon = this.querySelector('.accordion-icon-closed');
+        const openedIcon = this.querySelector('.accordion-icon-opened');
+        
+        // Close all other accordions
+        accordionTitles.forEach(otherTitle => {
+          if (otherTitle !== this) {
+            const otherTab = otherTitle.dataset.tab;
+            const otherContent = document.querySelector(`.elementor-tab-content[data-tab="${otherTab}"]`);
+            const otherClosedIcon = otherTitle.querySelector('.accordion-icon-closed');
+            const otherOpenedIcon = otherTitle.querySelector('.accordion-icon-opened');
+            
+            otherContent.style.maxHeight = '0';
+            otherClosedIcon.classList.remove('hidden');
+            otherOpenedIcon.classList.add('hidden');
+            otherClosedIcon.classList.remove('rotate-90');
+          }
+        });
+        
+        // Toggle current accordion
+        if (content.style.maxHeight === '0px' || content.style.maxHeight === '') {
+          content.style.maxHeight = content.scrollHeight + 'px';
+          closedIcon.classList.add('hidden', 'rotate-90');
+          openedIcon.classList.remove('hidden');
+        } else {
+          content.style.maxHeight = '0';
+          closedIcon.classList.remove('hidden', 'rotate-90');
+          openedIcon.classList.add('hidden');
+        }
+      });
+    });
+  });
+</script>
