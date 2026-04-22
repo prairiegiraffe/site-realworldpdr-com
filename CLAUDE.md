@@ -38,11 +38,11 @@ These are the **real colors and fonts** from the original site's CSS:
 
 - **SiteHeader** (header) — best version on page `/`
   - Source: `.source/pages/index.html`
-  - Selector hint: `header#629`
+  - Selector hint: `header#629.elementor-location-header, [data-id='23bb69ce']`
 - **SiteFooter** (footer) — best version on page `/`
   - Source: `.source/pages/index.html`
-  - Selector hint: `footer#38`
-- **CareerCallToAction** (cta) — best version on page `/pdr-101`
+  - Selector hint: `footer#38.elementor-location-footer`
+- **ReadyToStartCTA** (cta) — best version on page `/pdr-101`
   - Source: `.source/pages/pdr-101.html`
   - Selector hint: `[data-id='e00d15d'], [data-id='23338978']`
 
@@ -54,51 +54,55 @@ These are the **real colors and fonts** from the original site's CSS:
 - Components:
   - **HeroSection** (hero)
     - Selector: `[data-id='2b4699e2']`
-  - **LearnFeaturesGrid** (features)
+  - **BenefitsGrid** (features)
     - Selector: `[data-id='e896c66']`
   - **StopStrugglingSection** (text)
     - Selector: `[data-id='a127554']`
-  - **SkillsBenefitsSection** (features)
+  - **SkillsFeatures** (features)
     - Selector: `[data-id='b7f51b7']`
   - **StopGuessingSection** (text)
     - Selector: `[data-id='d02c9bf']`
-  - **TestimonialSection** (testimonials)
+  - **TestimonialWidget** (testimonials)
     - Selector: `[data-id='75ea937']`
-  - **ProcessStepsSection** (features)
+  - **ThreeStepProcess** (text)
     - Selector: `[data-id='7c25ef5']`
-  - **LearnPracticeExecuteSection** (text)
+  - **LearnPracticeExecute** (cta)
     - Selector: `[data-id='782ea1a']`
-  - **LeadMagnetSection** (form)
+  - **FreeResourceForm** (form)
     - Selector: `[data-id='0f6cb9f']`
 
-#### `/pdr-101` — PDR 101 Course Page
+#### `/pdr-101` — PDR 101 Course
 - Source HTML: `.source/pages/pdr-101.html`
 - Source CSS: `.source/css/pdr-101.css`
 - Components:
-  - **Pdr101HeroSection** (hero)
+  - **PDR101HeroSection** (hero)
     - Selector: `[data-id='484a3de']`
-  - **Pdr101CurriculumAccordion** (accordion) — interactive: accordion
+  - **PDR101CourseDetails** (text)
     - Selector: `[data-id='29f924b8']`
+  - **PDR101Curriculum** (accordion) — interactive: accordion
+    - Selector: `[data-id='c7f2937']`
 
-#### `/pdr-ultimate` — PDR Ultimate Course Page
+#### `/pdr-ultimate` — PDR Ultimate Course
 - Source HTML: `.source/pages/pdr-ultimate.html`
 - Source CSS: `.source/css/pdr-ultimate.css`
 - Components:
-  - **PdrUltimateHeroSection** (hero)
+  - **PDRUltimateHeroSection** (hero)
     - Selector: `[data-id='1710bef3']`
-  - **PdrUltimateCurriculumAccordion** (accordion) — interactive: accordion
+  - **PDRUltimateCourseDetails** (text)
     - Selector: `[data-id='7125d2d6']`
-  - **FirstToKnowSection** (text)
+  - **PDRUltimateCurriculum** (accordion) — interactive: accordion
+    - Selector: `[data-id='5cd8dd4f']`
+  - **BeFirstToKnowSection** (cta)
     - Selector: `[data-id='4bbb642']`
 
-#### `/privacy-policy` — Privacy Policy Page
+#### `/privacy-policy` — Privacy Policy
 - Source HTML: `.source/pages/privacy-policy.html`
 - Source CSS: `.source/css/privacy-policy.css`
 - Components:
   - **PrivacyPolicyContent** (text)
     - Selector: `[data-id='490eecf']`
 
-#### `/real-world-pdr-courses` — Courses Overview Page
+#### `/real-world-pdr-courses` — Courses Overview
 - Source HTML: `.source/pages/real-world-pdr-courses.html`
 - Source CSS: `.source/css/real-world-pdr-courses.css`
 - Components:
@@ -109,7 +113,7 @@ These are the **real colors and fonts** from the original site's CSS:
   - **MonthlyContentSection** (text)
     - Selector: `[data-id='54e3c4f']`
 
-#### `/real-world-prd` — About Real World PDR Page
+#### `/real-world-prd` — About Real World PDR
 - Source HTML: `.source/pages/real-world-prd.html`
 - Source CSS: `.source/css/real-world-prd.css`
 - Components:
@@ -117,14 +121,14 @@ These are the **real colors and fonts** from the original site's CSS:
     - Selector: `[data-id='d456023']`
   - **RealWorldExperienceSection** (text)
     - Selector: `[data-id='dd4b1f4']`
-  - **CoursesShowcaseSection** (features)
+  - **CoursesGallery** (gallery)
     - Selector: `[data-id='e3eb0b6']`
-  - **Pdr101WorkshopSection** (text)
+  - **PDR101WorkshopSection** (text)
     - Selector: `[data-id='49f7340']`
-  - **AboutCompanySection** (text)
+  - **AboutRealWorldPDR** (text)
     - Selector: `[data-id='378d8be9']`
 
-#### `/terms` — Terms Page
+#### `/terms` — Terms
 - Source HTML: `.source/pages/terms.html`
 - Source CSS: `.source/css/terms.css`
 - Components:
