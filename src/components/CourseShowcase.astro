@@ -1,8 +1,84 @@
 ---
-// TODO: Build this component
-// See CLAUDE.md for design tokens, .source/ for original HTML + CSS
 ---
 
-<section>
-  <p>Placeholder: CourseShowcase</p>
+<section class="relative w-full min-h-screen bg-black/[0.88] py-0">
+  <div class="max-w-[1400px] mx-auto w-full px-4">
+    <!-- Section heading -->
+    <div class="pt-[100px] text-center">
+      <h2 class="font-heading text-[44px] md:text-[60px] font-semibold tracking-[1.7px] text-white leading-[1.5] md:leading-tight">
+        Real World PDR Courses
+      </h2>
+      <!-- Divider -->
+      <div class="flex justify-center py-4">
+        <div class="w-[17%] h-[1px] bg-[#e5ca00]"></div>
+      </div>
+    </div>
+
+    <!-- Course cards grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-0 py-5 md:py-[18%] md:px-0">
+      <!-- Card 1: PDR 101 -->
+      <div class="p-5 md:pl-[30%] md:pr-[10%] md:py-[18%]">
+        <div class="bg-[rgba(38,38,38,0.81)] relative z-50">
+          <figure>
+            <img
+              src="/api/files/sites/proj_dkm43vn7/1776723863099/assets/mo7rogdgez7dme.jpg"
+              alt="PDR 101 Course"
+              class="w-full h-auto"
+              loading="lazy"
+              width="605"
+              height="404"
+            />
+          </figure>
+          <div class="p-4">
+            <h3 class="font-heading text-[40px] font-semibold uppercase tracking-[1.7px] text-[#e5ca00] mb-1">
+              PDR 101
+            </h3>
+            <p class="text-white text-[17px] font-light leading-relaxed">
+              A Journey of 1000 miles begins with a single step. This isn't just a step, but a leap into your PDR career, several videos covering everything from your first day, to the repair of your first dent. We are told by students this is the best they've ever seen the basics explained.
+            </p>
+          </div>
+        </div>
+        <div class="pt-4 relative z-50">
+          <a
+            href="/pdr-101"
+            class="inline-block bg-transparent text-[#e5ca00] text-sm font-semibold uppercase tracking-[3px] border-b border-[#e5ca00] pb-[10px] hover:text-white hover:border-white transition"
+          >
+            See Course
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2: PDR Monthly -->
+      <div class="p-5 md:pl-[10%] md:pr-[30%] md:py-[18%]">
+        <div class="bg-[rgba(38,38,38,0.81)] relative z-50">
+          <figure>
+            <img
+              src="/api/files/sites/proj_dkm43vn7/1776723863099/assets/mo7rogyldhl27q.jpg"
+              alt="PDR Monthly Course"
+              class="w-full h-auto"
+              loading="lazy"
+              width="605"
+              height="404"
+            />
+          </figure>
+          <div class="p-4">
+            <h3 class="font-heading text-[40px] font-semibold uppercase tracking-[1.7px] text-[#e5ca00] mb-1">
+              PDR Monthly
+            </h3>
+            <p class="text-white text-[17px] font-light leading-relaxed">
+              This is absolutely everything you could need to gain the knowledge to jumpstart your PDR career. Beginner to "super advanced" near impossible repairs covered here. Only 65 bucks gets you access to every one of our lessons including our newest and best content.
+            </p>
+          </div>
+        </div>
+        <div class="pt-4 relative z-50">
+          <a
+            href="/pdr-ultimate"
+            class="inline-block bg-transparent text-[#e5ca00] text-sm font-semibold uppercase tracking-[3px] border-b border-[#e5ca00] pb-[10px] hover:text-white hover:border-white transition"
+          >
+            learn more
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

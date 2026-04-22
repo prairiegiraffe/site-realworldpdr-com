@@ -11,17 +11,12 @@ export default {
         text: '#1f2937',
       },
       fontFamily: {
-        heading: ['Arial}.mejs-container', 'sans-serif'],
-        body: ['.mejs-container .mejs-controls', 'sans-serif'],
+        heading: ['Arial', 'Helvetica', 'sans-serif'],
+        body: ['system-ui', '-apple-system', 'sans-serif'],
       },
       borderRadius: {
         DEFAULT: '4px',
         btn: '4px',
-      },
-      boxShadow: {
-        sm: 'none !important',
-        md: '5px 0 0 hsla(0,0%,8%,.5),-5px 0 0 hsla(0,0%,8%,.5)',
-        lg: 'none}.me-cannotplay{width:auto!important}.media-embed-details .wp-audio-shortcode{display:inline-block',
       },
       maxWidth: {
         container: '1020px',

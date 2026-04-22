@@ -1,8 +1,6 @@
 ---
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
-import CourseAccordion from '../components/CourseAccordion.astro';
-import CareerCtaSection from '../components/CareerCtaSection.astro';
 
 interface Props {
   title: string;
@@ -19,9 +17,9 @@ const { title, description = '' } = Astro.props;
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content={description} />
   <title>{title}</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Arial}.mejs-container:wght@100;200;300;400;500;600;700;800;900&family=.mejs-container+.mejs-controls:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="icon" href="/api/files/sites/proj_dkm43vn7/1776723863099/assets/mo7rj6unjueh8i.png" sizes="32x32" />
+  <link rel="icon" href="/api/files/sites/proj_dkm43vn7/1776723863099/assets/mo7rj6wbxtc5wz.png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="/api/files/sites/proj_dkm43vn7/1776723863099/assets/mo7rj6wbxtc5wz.png" />
 </head>
 <body class="min-h-screen bg-background text-text font-body">
   <SiteHeader />

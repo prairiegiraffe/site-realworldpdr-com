@@ -1,8 +1,93 @@
 ---
-// TODO: Build this component
-// See CLAUDE.md for design tokens, .source/ for original HTML + CSS
 ---
 
-<section>
-  <p>Placeholder: LeadMagnetForm</p>
+<section class="relative py-[60px] md:py-[120px]">
+  <!-- Bottom SVG Shape Divider -->
+  <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none" class="w-full h-[30px] scale-x-[-1]">
+      <path class="fill-[#32373c]" d="M0,6V0h1000v100L0,6z"></path>
+    </svg>
+  </div>
+
+  <div class="max-w-container mx-auto px-4">
+    <div class="flex flex-col md:flex-row gap-8 items-center">
+      <!-- Left Column: Image -->
+      <div class="flex-1 p-5 md:p-10">
+        <img
+          loading="lazy"
+          decoding="async"
+          width="800"
+          height="534"
+          src="/api/files/sites/proj_dkm43vn7/1776723863099/assets/mo7rijlhw0ofux.png"
+          alt="The Tools You Need To Launch Your PDR Career guide"
+          class="w-full h-auto"
+        />
+      </div>
+
+      <!-- Right Column: Text + Form -->
+      <div class="flex-1 p-5 md:px-10 md:pr-[100px]">
+        <h2 class="text-text font-[Poppins,sans-serif] text-2xl md:text-3xl font-bold leading-tight mb-4">
+          Download our free resource: The Tools You Need To Launch Your PDR Career
+        </h2>
+
+        <p class="text-text mb-6">
+          This resource is our list of the tools we recommend for all techs starting out in PDR.
+        </p>
+
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-[14px] h-[14px] text-accent shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+            </svg>
+            <span>The tools we use and trust</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-[14px] h-[14px] text-accent shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+            </svg>
+            <span>Everything you need to get started</span>
+          </li>
+          <li class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-[14px] h-[14px] text-accent shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+            </svg>
+            <span>No BS, just the good stuff</span>
+          </li>
+        </ul>
+
+        <form class="space-y-3" name="Tool List Subscribe" aria-label="Tool List Subscribe">
+          <div>
+            <label for="lead-name" class="block text-text text-sm font-medium mb-1">Name</label>
+            <input
+              type="text"
+              id="lead-name"
+              name="name"
+              placeholder="First Name"
+              required
+              class="w-full px-4 py-2 border border-gray-300 rounded text-sm bg-white text-text focus:outline-none focus:ring-2 focus:ring-primary"
+            />
+          </div>
+          <div>
+            <label for="lead-email" class="block text-text text-sm font-medium mb-1">Email</label>
+            <input
+              type="email"
+              id="lead-email"
+              name="email"
+              placeholder="Email"
+              required
+              class="w-full px-4 py-2 border border-gray-300 rounded text-sm bg-white text-text focus:outline-none focus:ring-2 focus:ring-primary"
+            />
+          </div>
+          <div>
+            <button
+              type="submit"
+              class="w-full bg-[#F6DB0F] hover:bg-secondary text-white px-6 py-3 rounded text-sm font-bold uppercase tracking-wider transition-colors"
+            >
+              SEND ME THE GUIDE!
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </section>

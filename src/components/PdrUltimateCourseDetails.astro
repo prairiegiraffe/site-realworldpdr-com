@@ -1,8 +1,127 @@
 ---
-// TODO: Build this component
-// See CLAUDE.md for design tokens, .source/ for original HTML + CSS
+import CourseAccordion from './CourseAccordion.astro';
+
+const items = [
+  {
+    title: "How to use Real World PDR",
+    lessons: [
+      "How to Use Real World PDR",
+      "PDR 101",
+      "Beginner \u2013 Light Crease Glue Pull",
+      "Beginner \u2013 Glue Pull with Slide Hammer",
+      "ROOF Hail Dent/Tool Giveaway Deep hail Dents",
+    ],
+  },
+  {
+    title: "Beginner",
+    lessons: [
+      "Beginner \u2013 Fender Dent",
+      "Beginner \u2013 Aluminum for Beginners",
+      "Beginner \u2013 Knockdowns",
+      "Beginner Body line Damage and bonus lessons!",
+      "All about Knockdowns Expanded",
+      "BEGINNER door dings quick lesson",
+      "Higher level beginner Body line damage",
+      "Leverage and tips Tips",
+      "Cold glue and you",
+      "Looking at crown flow",
+      "Failure and how you deal with it",
+      "Deeper bedside dent",
+      "Beginner Blending with Practice examples",
+      "Don\u2019t be a menace to your own Psyche while working on aluminum",
+      "Door DING Mega Lesson",
+      "R&I redcaps with Fred Sheran",
+      "Fender Body line Ding with Kasper",
+      "1 on 1 training. Tony with one week.",
+      "Whale tails and tight access",
+      "Door dings, body lines and finishing",
+    ],
+  },
+  {
+    title: "Intermediate Training",
+    lessons: [
+      "Intermediate \u2013 Ri",
+      "Intermediate \u2013 Nasty Wholesale Body Line",
+      "Intermediate \u2013 Edge of Panel Dent",
+      "Intermediate \u2013 Edge Of Panel Techniques",
+      "Intermediate \u2013 Advanced Door",
+      "Intermediate \u2013 Jeep Cowl",
+      "Blending Skills. The Real Deal.",
+      "BLENDING (MAY BE REPEAT)",
+      "Hail Tips and Tricks",
+      "Body Line Dents difficult access",
+      "Quarter Panel Whack Dent/Map Study",
+      "Hatch Dent / Pressures / obstacles / Create your DENT map",
+      "Beginner/Intermediate Larger dent-Finishing",
+      "Aluminum Crease Dents Discussed",
+      "Hail Rail how to/ blending and pulling",
+      "DEEP hail dent/Tool Giveaway Sharp tips",
+      "Pinchy Body lines. The SECRET",
+      "Repairing someone else\u2019s work",
+      "Crown flow, pinchy little body lines",
+      "Twisted new Subaru Body line Damage",
+      "Drill, Stanliner, Blend. quarter panel body line dent",
+      "Glue Pull/ Tension Pull BODY LINES",
+      "Real time. hail hood repair by request",
+      "Kasper Clean repair",
+    ],
+  },
+  {
+    title: "Advanced Training",
+    lessons: [
+      "Advanced \u2013 Black Fender",
+      "Advanced \u2013 Jeep Crease",
+      "Gate Smash part 1",
+      "Gate smash Pt 2",
+      "Stabilizing Oil Canning dents",
+      "TRUCK BEDSIDE undoing previous PDR/Blending",
+      "Huge Quarter panel smash",
+      "Bad Previous PDR Repair, sales",
+      "Aluminum tail gate dent",
+    ],
+  },
+  {
+    title: "Super Advanced",
+    lessons: [
+      "Quarter Kick \u2013 Must Watch",
+      "Super Tough 3 stretched aluminum Hail Bombs",
+    ],
+  },
+  {
+    title: "RI Videos",
+    lessons: [
+      "Kia Optima Headliner.",
+      "Kia Optima Headliner.",
+      "Taking SH*t apart with Sheran",
+    ],
+  },
+  {
+    title: "Retail Shop Advice",
+    lessons: [
+      "Days work",
+    ],
+  },
+];
 ---
 
-<section>
-  <p>Placeholder: PdrUltimateCourseDetails</p>
+<section class="bg-black py-12 md:py-[150px] px-4 md:px-6">
+  <div class="max-w-container mx-auto md:px-[20%]">
+    <h2 class="font-heading text-4xl md:text-[54px] font-semibold text-white text-center md:text-left leading-tight mb-1">
+      Real World PDR Ultimate
+    </h2>
+    <h3 class="font-heading text-[17px] font-light text-[#e5ca00] text-center md:text-left mb-8">
+      Course curriculum
+    </h3>
+
+    <CourseAccordion items={items} />
+
+    <div class="text-center pt-9">
+      <a
+        href="https://realworldpdr.thinkific.com/cart/add_product/446304?price_id=467664"
+        class="inline-block text-[#e5ca00] text-sm md:text-xl font-semibold uppercase tracking-[3px] border-b border-[#e5ca00] pb-2.5 hover:text-white hover:border-white transition-colors duration-300"
+      >
+        Buy The Course
+      </a>
+    </div>
+  </div>
 </section>

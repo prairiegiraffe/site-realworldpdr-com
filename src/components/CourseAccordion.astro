@@ -1,8 +1,121 @@
 ---
-// TODO: Build this component
-// See CLAUDE.md for design tokens, .source/ for original HTML + CSS
+interface AccordionItem {
+  title: string;
+  lessons: string[];
+}
+interface Props {
+  items: AccordionItem[];
+}
+const { items } = Astro.props;
 ---
 
-<section>
-  <p>Placeholder: CourseAccordion</p>
-</section>
+<div class="accordion-wrapper">
+  {items.map((item, index) => (
+    <div class="accordion-item border-b border-white/10">
+      <button
+        class:list={[
+          "accordion-trigger flex items-center justify-between w-full text-left p-4 cursor-pointer transition-colors",
+          index === 0 ? "active" : ""
+        ]}
+        aria-expanded={index === 0 ? "true" : "false"}
+        data-index={index}
+      >
+        <span class:list={[
+          "accordion-title font-heading text-2xl md:text-[40px] font-semibold transition-colors",
+          index === 0 ? "text-[#e5ca00]" : "text-white"
+        ]}>
+          {item.title}
+        </span>
+        <span class="accordion-icon ml-3 flex-shrink-0 transition-colors">
+          <svg
+            class:list={["chevron-right w-5 h-5 md:w-6 md:h-6", index === 0 ? "hidden" : ""]}
+            fill="currentColor"
+            viewBox="0 0 320 512"
+            aria-hidden="true"
+          >
+            <path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
+          </svg>
+          <svg
+            class:list={["chevron-down w-5 h-5 md:w-6 md:h-6", index === 0 ? "" : "hidden"]}
+            fill="currentColor"
+            viewBox="0 0 448 512"
+            aria-hidden="true"
+          >
+            <path d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+          </svg>
+        </span>
+      </button>
+      <div
+        class:list={[
+          "accordion-content overflow-hidden transition-all duration-300",
+          index === 0 ? "max-h-[2000px] opacity-100" : "max-h-0 opacity-0"
+        ]}
+        role="region"
+      >
+        <ul class="px-4 pb-4 space-y-2">
+          {item.lessons.map((lesson) => (
+            <li class="text-white text-[17px] capitalize pl-2">{lesson}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  ))}
+</div>
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const triggers = document.querySelectorAll('.accordion-trigger');
+
+    triggers.forEach((trigger) => {
+      trigger.addEventListener('click', () => {
+        const isActive = trigger.classList.contains('active');
+        const content = trigger.nextElementSibling as HTMLElement;
+        const title = trigger.querySelector('.accordion-title') as HTMLElement;
+        const chevronRight = trigger.querySelector('.chevron-right') as HTMLElement;
+        const chevronDown = trigger.querySelector('.chevron-down') as HTMLElement;
+
+        if (isActive) {
+          // Close this item
+          trigger.classList.remove('active');
+          trigger.setAttribute('aria-expanded', 'false');
+          content.classList.remove('max-h-[2000px]', 'opacity-100');
+          content.classList.add('max-h-0', 'opacity-0');
+          title.classList.remove('text-[#e5ca00]');
+          title.classList.add('text-white');
+          chevronRight.classList.remove('hidden');
+          chevronDown.classList.add('hidden');
+        } else {
+          // Close all items in the same accordion
+          const wrapper = trigger.closest('.accordion-wrapper');
+          if (wrapper) {
+            wrapper.querySelectorAll('.accordion-trigger.active').forEach((activeTrigger) => {
+              const activeContent = activeTrigger.nextElementSibling as HTMLElement;
+              const activeTitle = activeTrigger.querySelector('.accordion-title') as HTMLElement;
+              const activeChevronRight = activeTrigger.querySelector('.chevron-right') as HTMLElement;
+              const activeChevronDown = activeTrigger.querySelector('.chevron-down') as HTMLElement;
+
+              activeTrigger.classList.remove('active');
+              activeTrigger.setAttribute('aria-expanded', 'false');
+              activeContent.classList.remove('max-h-[2000px]', 'opacity-100');
+              activeContent.classList.add('max-h-0', 'opacity-0');
+              activeTitle.classList.remove('text-[#e5ca00]');
+              activeTitle.classList.add('text-white');
+              activeChevronRight.classList.remove('hidden');
+              activeChevronDown.classList.add('hidden');
+            });
+          }
+
+          // Open this item
+          trigger.classList.add('active');
+          trigger.setAttribute('aria-expanded', 'true');
+          content.classList.remove('max-h-0', 'opacity-0');
+          content.classList.add('max-h-[2000px]', 'opacity-100');
+          title.classList.remove('text-white');
+          title.classList.add('text-[#e5ca00]');
+          chevronRight.classList.add('hidden');
+          chevronDown.classList.remove('hidden');
+        }
+      });
+    });
+  });
+</script>

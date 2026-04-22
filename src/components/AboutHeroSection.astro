@@ -1,8 +1,53 @@
 ---
-// TODO: Build this component
-// See CLAUDE.md for design tokens, .source/ for original HTML + CSS
 ---
 
-<section>
-  <p>Placeholder: AboutHeroSection</p>
+<section class="relative min-h-[95vh] flex items-center -mt-[105px] md:-mt-[105px]">
+  <!-- Background image -->
+  <div class="absolute inset-0 bg-cover bg-top bg-no-repeat" style="background-image: url('/api/files/sites/proj_dkm43vn7/1776723863099/assets/mo7roht1xwcb7x.jpg');"></div>
+  <!-- Dark overlay -->
+  <div class="absolute inset-0 bg-black/[0.89] opacity-[0.77]"></div>
+
+  <div class="relative z-10 max-w-[1110px] mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-0 px-4">
+    <!-- Left column: content -->
+    <div class="bg-black/[0.79] p-5 pt-[200px] md:pt-10 md:p-10 mt-0 md:mt-[60px]">
+      <h1 class="font-heading text-[39px] md:text-[80px] font-semibold tracking-[1.7px] text-white mb-0">
+        Real World PDR
+      </h1>
+      <!-- Divider -->
+      <div class="py-4">
+        <div class="w-[10%] h-[3.6px] bg-[#e5ca00]"></div>
+      </div>
+      <p class="text-white text-lg font-light">
+        Real World PDR Training like never seen before. No Gimmicks, NO BS. Just Real Training brought to you by industry leading Master Technician, Jim Mitchell
+      </p>
+      <div class="pt-4 pb-0 md:pb-0">
+        <a
+          href="#whatisrealworld"
+          class="inline-block bg-transparent text-[#e5ca00] text-sm font-semibold uppercase tracking-[3px] border-b border-[#e5ca00] pb-[10px] hover:text-white hover:border-white transition"
+        >
+          Learn More
+        </a>
+      </div>
+    </div>
+
+    <!-- Right column: video placeholder -->
+    <div class="bg-black/[0.79] p-5 pt-[200px] md:pt-10 md:p-10 mt-0 md:mt-[60px] flex items-center justify-center">
+      <div class="relative w-full aspect-video cursor-pointer group">
+        <img
+          src="/api/files/sites/proj_dkm43vn7/1776723863099/assets/mo7rogxzgv9l4p.jpg"
+          alt="Real World PDR Training Video"
+          class="w-full h-full object-cover"
+          loading="lazy"
+        />
+        <!-- Play button overlay -->
+        <div class="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition">
+          <div class="w-16 h-16 md:w-20 md:h-20 bg-white/90 rounded-full flex items-center justify-center group-hover:bg-white transition">
+            <svg class="w-6 h-6 md:w-8 md:h-8 text-black ml-1" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

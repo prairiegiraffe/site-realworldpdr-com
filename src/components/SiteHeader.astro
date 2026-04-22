@@ -1,8 +1,132 @@
 ---
-// TODO: Build this component
-// See CLAUDE.md for design tokens, .source/ for original HTML + CSS
+// SiteHeader — shared across all pages
 ---
 
-<section>
-  <p>Placeholder: SiteHeader</p>
-</section>
+<header class="bg-white shadow-sm sticky top-0 z-50">
+  <div class="max-w-container mx-auto px-4 py-4 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="/" class="flex-shrink-0">
+      <img
+        src="https://realworldpdr.com/wp-content/uploads/2021/07/RWPDR-Logo-All-Black.png"
+        alt="Real World PDR"
+        class="w-[150px] md:w-[200px] h-auto"
+      />
+    </a>
+
+    <!-- Desktop nav (right side) -->
+    <div class="hidden md:flex items-center gap-4">
+      <a
+        href="https://realworldpdr.thinkific.com/users/sign_in"
+        class="text-sm font-semibold tracking-wide text-text hover:text-primary transition-colors"
+      >
+        LOG IN
+      </a>
+      <a
+        href="https://realworldpdr.thinkific.com/cart/add_product/446304?price_id=467664"
+        class="inline-block bg-[#32373c] text-white text-xs font-semibold tracking-wide px-4 py-2 rounded hover:bg-[#23272b] transition-colors"
+      >
+        SUBSCRIBE TO PDR ULTIMATE
+      </a>
+    </div>
+
+    <!-- Mobile: LOG IN + Hamburger -->
+    <div class="flex items-center gap-4 md:hidden">
+      <a
+        href="https://realworldpdr.thinkific.com/users/sign_in"
+        class="text-sm font-semibold tracking-wide text-text hover:text-primary transition-colors"
+      >
+        LOG IN
+      </a>
+      <button
+        id="mobile-menu-btn"
+        type="button"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        class="p-2 text-text hover:text-primary transition-colors"
+      >
+        <!-- Hamburger icon -->
+        <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <!-- Close icon (hidden by default) -->
+        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile dropdown menu -->
+  <nav
+    id="mobile-menu"
+    class="hidden md:hidden border-t border-gray-100 bg-white"
+    aria-label="Mobile navigation"
+  >
+    <ul class="max-w-container mx-auto px-4 py-4 space-y-1">
+      <li>
+        <a href="/real-world-pdr-courses" class="block px-3 py-2 text-sm font-semibold tracking-wide text-text hover:bg-secondary rounded transition-colors">
+          PDR COURSES
+        </a>
+      </li>
+      <li>
+        <a href="/pdr-101" class="block px-3 py-2 text-sm font-semibold tracking-wide text-text hover:bg-secondary rounded transition-colors">
+          PDR 101
+        </a>
+      </li>
+      <li>
+        <a href="/pdr-ultimate" class="block px-3 py-2 text-sm font-semibold tracking-wide text-text hover:bg-secondary rounded transition-colors">
+          PDR MONTHLY
+        </a>
+      </li>
+      <li>
+        <a href="#" class="block px-3 py-2 text-sm font-semibold tracking-wide text-text hover:bg-secondary rounded transition-colors">
+          RESPECT THE CROWN
+        </a>
+      </li>
+      <li>
+        <a href="#" class="block px-3 py-2 text-sm font-semibold tracking-wide text-text hover:bg-secondary rounded transition-colors">
+          CONTACT US
+        </a>
+      </li>
+      <li>
+        <a href="https://realworldpdr.thinkific.com/users/sign_in" class="block px-3 py-2 text-sm font-semibold tracking-wide text-text hover:bg-secondary rounded transition-colors">
+          SIGN IN
+        </a>
+      </li>
+      <li class="pt-2">
+        <a
+          href="https://realworldpdr.thinkific.com/cart/add_product/446304?price_id=467664"
+          class="block text-center bg-[#32373c] text-white text-xs font-semibold tracking-wide px-4 py-2 rounded hover:bg-[#23272b] transition-colors"
+        >
+          SUBSCRIBE TO PDR ULTIMATE
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+  const closeIcon = document.getElementById('close-icon');
+
+  if (menuBtn && mobileMenu && hamburgerIcon && closeIcon) {
+    menuBtn.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+
+      if (isOpen) {
+        mobileMenu.classList.add('hidden');
+        hamburgerIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      } else {
+        mobileMenu.classList.remove('hidden');
+        hamburgerIcon.classList.add('hidden');
+        closeIcon.classList.remove('hidden');
+        menuBtn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  }
+</script>

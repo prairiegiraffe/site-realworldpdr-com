@@ -1,8 +1,43 @@
 ---
-// TODO: Build this component
-// See CLAUDE.md for design tokens, .source/ for original HTML + CSS
+import CourseAccordion from './CourseAccordion.astro';
+
+const items = [
+  {
+    title: "Instructions for this course",
+    lessons: [
+      "How to Use the PDR 101",
+      "HOW TO USE REAL WORLD PDR",
+    ],
+  },
+  {
+    title: "Welcome to PDR 101",
+    lessons: [
+      "PDR 101",
+      "Glue Pulling with a Slide Hammer",
+      "Light Crease Glue Pull",
+    ],
+  },
+];
 ---
 
-<section>
-  <p>Placeholder: Pdr101CourseDetails</p>
+<section class="bg-black py-12 md:py-[150px] px-4 md:px-6">
+  <div class="max-w-container mx-auto md:px-[20%]">
+    <h2 class="font-heading text-4xl md:text-[60px] font-semibold text-white text-center md:text-left leading-tight mb-1">
+      Real World PDR 101
+    </h2>
+    <h3 class="font-heading text-[17px] font-light text-[#e5ca00] text-center md:text-left mb-8">
+      Course curriculum
+    </h3>
+
+    <CourseAccordion items={items} />
+
+    <div class="text-center pt-9">
+      <a
+        href="https://realworldpdr.thinkific.com/cart/add_product/445811?price_id=467088"
+        class="inline-block text-[#e5ca00] text-sm md:text-xl font-semibold uppercase tracking-[3px] border-b border-[#e5ca00] pb-2.5 hover:text-white hover:border-white transition-colors duration-300"
+      >
+        Buy The Course
+      </a>
+    </div>
+  </div>
 </section>
