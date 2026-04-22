@@ -1,0 +1,26 @@
+{
+  "images": [
+    {
+      "originalUrl": "https://realworldpdr.com/wp-content/uploads/2021/07/RWPDR-Logo-full-300x300.png",
+      "servedUrl": "https://devtools.prairiegiraffe.com/api/files/sites/proj_dkm43vn7/1776723863099/assets/mo7rj6wbxtc5wz.png",
+      "type": "image/png",
+      "filename": "mo7rj6wbxtc5wz.png"
+    },
+    {
+      "originalUrl": "https://realworldpdr.com/wp-content/uploads/2021/07/RWPDR-Logo-full-100x100.png",
+      "servedUrl": "https://devtools.prairiegiraffe.com/api/files/sites/proj_dkm43vn7/1776723863099/assets/mo7rj6unjueh8i.png",
+      "type": "image/png",
+      "filename": "mo7rj6unjueh8i.png"
+    }
+  ],
+  "fonts": [],
+  "videos": [
+    {
+      "originalUrl": "https://realworldpdr.com/wp-content/uploads/2019/09/preview-pdr101.mp4",
+      "servedUrl": "https://devtools.prairiegiraffe.com/api/files/sites/proj_dkm43vn7/1776723863099/assets/mo7ro1xj0mcepu.mp4",
+      "type": "video/mp4",
+      "filename": "mo7ro1xj0mcepu.mp4"
+    }
+  ],
+  "baseUrl": "https://devtools.prairiegiraffe.com/api/files"
+}

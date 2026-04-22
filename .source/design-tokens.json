@@ -1,0 +1,52 @@
+{
+  "colors": {
+    "primary": "#720eec",
+    "secondary": "#e9e6ed",
+    "accent": "#61ce70",
+    "background": "#ffffff",
+    "text": "#1f2937",
+    "palette": [
+      "#e5ca00",
+      "rgba(0,0,0,0)",
+      "#f98608",
+      "#958e09",
+      "#d9534f",
+      "#1e85be",
+      "#7f54b3",
+      "#dc3232",
+      "rgba(32, 7, 7, 0.8)",
+      "#cc3366",
+      "rgba(0,0,0,.05)",
+      "#5cb85c"
+    ]
+  },
+  "fonts": {
+    "heading": "Arial}.mejs-container",
+    "body": ".mejs-container .mejs-controls",
+    "weights": [
+      "100",
+      "200",
+      "300",
+      "400",
+      "500",
+      "600",
+      "700",
+      "800",
+      "900"
+    ]
+  },
+  "spacing": {
+    "base": 16,
+    "sectionPadding": "40px"
+  },
+  "radius": {
+    "default": "4px",
+    "button": "4px"
+  },
+  "shadows": {
+    "sm": "none !important",
+    "md": "5px 0 0 hsla(0,0%,8%,.5),-5px 0 0 hsla(0,0%,8%,.5)",
+    "lg": "none}.me-cannotplay{width:auto!important}.media-embed-details .wp-audio-shortcode{display:inline-block"
+  },
+  "containerWidth": "1020px"
+}
