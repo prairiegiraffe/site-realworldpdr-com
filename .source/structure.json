@@ -3,17 +3,24 @@
     {
       "name": "SiteHeader",
       "type": "header",
-      "selector": "header#629.elementor-location-header, [data-id='23bb69ce']",
+      "selector": "header#629, [data-elementor-type='header']",
       "canonicalPage": "/"
     },
     {
       "name": "SiteFooter",
       "type": "footer",
-      "selector": "footer#38.elementor-location-footer",
+      "selector": "footer#38, [data-elementor-type='footer']",
       "canonicalPage": "/"
     },
     {
-      "name": "ReadyToStartCTA",
+      "name": "CourseAccordion",
+      "type": "accordion",
+      "selector": "[data-id='c7f2937'], [data-id='5cd8dd4f']",
+      "canonicalPage": "/pdr-ultimate",
+      "interactivity": "accordion"
+    },
+    {
+      "name": "CareerCtaSection",
       "type": "cta",
       "selector": "[data-id='e00d15d'], [data-id='23338978']",
       "canonicalPage": "/pdr-101"
@@ -31,49 +38,49 @@
           "interactivity": null
         },
         {
-          "name": "BenefitsGrid",
+          "name": "BenefitsFeatures",
           "type": "features",
           "selector": "[data-id='e896c66']",
           "interactivity": null
         },
         {
-          "name": "StopStrugglingSection",
+          "name": "ProblemSection",
           "type": "text",
           "selector": "[data-id='a127554']",
           "interactivity": null
         },
         {
-          "name": "SkillsFeatures",
+          "name": "SolutionBenefits",
           "type": "features",
           "selector": "[data-id='b7f51b7']",
           "interactivity": null
         },
         {
-          "name": "StopGuessingSection",
-          "type": "text",
+          "name": "VideoCtaSection",
+          "type": "cta",
           "selector": "[data-id='d02c9bf']",
           "interactivity": null
         },
         {
-          "name": "TestimonialWidget",
+          "name": "TestimonialSection",
           "type": "testimonials",
           "selector": "[data-id='75ea937']",
           "interactivity": null
         },
         {
-          "name": "ThreeStepProcess",
-          "type": "text",
+          "name": "ProcessSteps",
+          "type": "features",
           "selector": "[data-id='7c25ef5']",
           "interactivity": null
         },
         {
-          "name": "LearnPracticeExecute",
+          "name": "FinalCtaSection",
           "type": "cta",
           "selector": "[data-id='782ea1a']",
           "interactivity": null
         },
         {
-          "name": "FreeResourceForm",
+          "name": "LeadMagnetForm",
           "type": "form",
           "selector": "[data-id='0f6cb9f']",
           "interactivity": null
@@ -85,22 +92,16 @@
       "title": "PDR 101 Course",
       "sections": [
         {
-          "name": "PDR101HeroSection",
+          "name": "Pdr101HeroSection",
           "type": "hero",
           "selector": "[data-id='484a3de']",
           "interactivity": null
         },
         {
-          "name": "PDR101CourseDetails",
+          "name": "Pdr101CourseDetails",
           "type": "text",
           "selector": "[data-id='29f924b8']",
           "interactivity": null
-        },
-        {
-          "name": "PDR101Curriculum",
-          "type": "accordion",
-          "selector": "[data-id='c7f2937']",
-          "interactivity": "accordion"
         }
       ]
     },
@@ -109,26 +110,20 @@
       "title": "PDR Ultimate Course",
       "sections": [
         {
-          "name": "PDRUltimateHeroSection",
+          "name": "PdrUltimateHeroSection",
           "type": "hero",
           "selector": "[data-id='1710bef3']",
           "interactivity": null
         },
         {
-          "name": "PDRUltimateCourseDetails",
+          "name": "PdrUltimateCourseDetails",
           "type": "text",
           "selector": "[data-id='7125d2d6']",
           "interactivity": null
         },
         {
-          "name": "PDRUltimateCurriculum",
-          "type": "accordion",
-          "selector": "[data-id='5cd8dd4f']",
-          "interactivity": "accordion"
-        },
-        {
-          "name": "BeFirstToKnowSection",
-          "type": "cta",
+          "name": "UpdatesNotification",
+          "type": "text",
           "selector": "[data-id='4bbb642']",
           "interactivity": null
         }
@@ -148,7 +143,7 @@
     },
     {
       "path": "/real-world-pdr-courses",
-      "title": "Courses Overview",
+      "title": "Courses Page",
       "sections": [
         {
           "name": "CoursesHeroSection",
@@ -157,7 +152,7 @@
           "interactivity": null
         },
         {
-          "name": "AffordableCareerSection",
+          "name": "AffordableCoursesSection",
           "type": "text",
           "selector": "[data-id='4615816']",
           "interactivity": null
@@ -172,7 +167,7 @@
     },
     {
       "path": "/real-world-prd",
-      "title": "About Real World PDR",
+      "title": "About Page",
       "sections": [
         {
           "name": "AboutHeroSection",
@@ -181,25 +176,25 @@
           "interactivity": null
         },
         {
-          "name": "RealWorldExperienceSection",
+          "name": "ExperienceSection",
           "type": "text",
           "selector": "[data-id='dd4b1f4']",
           "interactivity": null
         },
         {
-          "name": "CoursesGallery",
-          "type": "gallery",
+          "name": "CourseShowcase",
+          "type": "features",
           "selector": "[data-id='e3eb0b6']",
           "interactivity": null
         },
         {
-          "name": "PDR101WorkshopSection",
+          "name": "WorkshopSection",
           "type": "text",
           "selector": "[data-id='49f7340']",
           "interactivity": null
         },
         {
-          "name": "AboutRealWorldPDR",
+          "name": "AboutCompanySection",
           "type": "text",
           "selector": "[data-id='378d8be9']",
           "interactivity": null
@@ -208,7 +203,7 @@
     },
     {
       "path": "/terms",
-      "title": "Terms",
+      "title": "Terms Page",
       "sections": [
         {
           "name": "TermsContent",
