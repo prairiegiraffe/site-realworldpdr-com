@@ -6,17 +6,19 @@ import ProblemSection from '../components/ProblemSection.astro';
 import SolutionBenefits from '../components/SolutionBenefits.astro';
 import VideoCtaSection from '../components/VideoCtaSection.astro';
 import ProcessSteps from '../components/ProcessSteps.astro';
+import YouTubeTestimonial from '../components/YouTubeTestimonial.astro';
 import FinalCtaSection from '../components/FinalCtaSection.astro';
 import LeadMagnetForm from '../components/LeadMagnetForm.astro';
 ---
 
-<BaseLayout title="PDR Monthly Course | Real World PDR" description="Online paintless dent repair training. Quality online video courses that teach you what you need to know so you can have the career you've always dreamed of in PDR.">
+<BaseLayout title="PDR Monthly Course | Real World PDR" description="Online paintless dent repair training. Quality online video courses that teach you what you need to know so you can have the career you've always dreamed of in PDR." hideYouTube={true}>
   <HeroSection />
   <BenefitsFeatures />
   <ProblemSection />
   <SolutionBenefits />
   <VideoCtaSection />
   <ProcessSteps />
+  <YouTubeTestimonial />
   <FinalCtaSection />
   <LeadMagnetForm />
 </BaseLayout>

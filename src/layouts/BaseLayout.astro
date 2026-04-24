@@ -6,9 +6,10 @@ import YouTubeTestimonial from '../components/YouTubeTestimonial.astro';
 interface Props {
   title: string;
   description?: string;
+  hideYouTube?: boolean;
 }
 
-const { title, description = 'Real World PDR - The Best Online PDR Training Available' } = Astro.props;
+const { title, description = 'Real World PDR - The Best Online PDR Training Available', hideYouTube = false } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -24,7 +25,7 @@ const { title, description = 'Real World PDR - The Best Online PDR Training Avai
   <body class="font-body text-gray-body bg-white">
     <SiteHeader />
     <slot />
-    <YouTubeTestimonial />
+    {!hideYouTube && <YouTubeTestimonial />}
     <SiteFooter />
   </body>
 </html>
