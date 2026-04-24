@@ -1,18 +1,25 @@
 ---
 ---
 
-<section class="py-16 px-4">
+<section class="py-20 px-4 relative">
+  <!-- SVG Shape Divider -->
+  <div class="absolute top-0 left-0 w-full overflow-hidden leading-[0] pointer-events-none">
+    <svg class="block w-full h-[30px]" viewBox="0 0 1000 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,6V0h1000v100L0,6z" fill="#f5f5f5"></path>
+    </svg>
+  </div>
+
   <div class="max-w-container mx-auto">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-      <div class="min-h-[200px] bg-gray-100 rounded order-2 md:order-1"></div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div class="hidden md:block order-2 md:order-1"></div>
       <div class="order-1 md:order-2">
         <h2 class="text-3xl font-bold text-black mb-6">All Of Our Best Content, Updated Monthly</h2>
-        <p class="text-gray-body mb-6">
+        <p class="text-gray-body mb-8 leading-relaxed">
           Everything you could need to gain the knowledge to jumpstart your <a href="/pdr-101" class="text-gold underline hover:opacity-80">PDR career</a>. Beginner to "super advanced" near impossible repairs covered here. Only 65 bucks gets you access to every one of our lessons including our newest and best content.
         </p>
         <a
           href="/pdr-ultimate"
-          class="bg-gold text-white font-bold px-8 py-3 rounded inline-block hover:opacity-90 transition-opacity"
+          class="bg-gold text-white font-semibold uppercase text-base px-8 py-3 rounded inline-block tracking-wider hover:bg-[#f98608] transition-colors hover:scale-105 transform"
         >
           Read More
         </a>

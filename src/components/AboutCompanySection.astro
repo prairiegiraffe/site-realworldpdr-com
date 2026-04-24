@@ -1,28 +1,35 @@
 ---
 ---
 
-<section class="py-16 px-4">
-  <div class="max-w-container mx-auto">
+<section class="py-16 px-4 relative">
+  <!-- SVG Shape Divider at top -->
+  <div class="absolute top-0 left-0 w-full overflow-hidden leading-[0] pointer-events-none">
+    <svg class="block w-full h-[30px]" viewBox="0 0 1000 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,6V0h1000v100L0,6z" fill="#f5f5f5"></path>
+    </svg>
+  </div>
+
+  <div class="max-w-container mx-auto pt-8">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <div>
         <h4 class="text-2xl font-bold text-black mb-4">About Real World PDR</h4>
-        <p class="text-gray-body mb-4">
+        <p class="text-gray-body mb-4 leading-relaxed">
           Real World PDR was born from the desire to teach people who want to get into the Paintless Dent Repair industry how to provide the best possible service to their customers.
         </p>
-        <p class="text-gray-body mb-4">
+        <p class="text-gray-body mb-4 leading-relaxed">
           We don't just show you how to repair a dent in a lab. We want you to be confident that the skills you learn with us Real World PDR will translate to real life.
         </p>
-        <p class="text-gray-body mb-6">
+        <p class="text-gray-body mb-8 leading-relaxed">
           PDR is not easy, it will require a lot of practice and patience. But we're with you every step of the way, from what tools you need to buy, all the way through the most advanced dents and creases.
         </p>
         <a
           href="/real-world-pdr-courses"
-          class="bg-gold text-white font-bold px-8 py-3 rounded inline-block hover:opacity-90 transition-opacity"
+          class="bg-gold text-white font-semibold uppercase text-base px-8 py-3 rounded inline-block tracking-wider hover:bg-[#f98608] transition-colors hover:scale-105 transform"
         >
           See Courses
         </a>
       </div>
-      <div></div>
+      <div class="hidden md:block"></div>
     </div>
   </div>
 </section>

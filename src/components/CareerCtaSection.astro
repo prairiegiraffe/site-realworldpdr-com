@@ -6,23 +6,25 @@ interface Props {
 const { enrollUrl = 'https://realworldpdr.thinkific.com/cart/add_product/446304?price_id=467664' } = Astro.props;
 ---
 
-<section>
+<section class="relative">
   <div class="grid grid-cols-1 md:grid-cols-2 min-h-[400px]">
     <div
-      class="bg-cover bg-center min-h-[300px]"
+      class="bg-cover bg-center min-h-[300px] md:min-h-[400px]"
       style="background-image: url('https://devtools.prairiegiraffe.com/api/files/sites/proj_dkm43vn7/1776723863099/assets/mo7ro14yybmlsu.jpg');"
+      role="img"
+      aria-label="Red car dent free"
     ></div>
-    <div class="flex items-center bg-black text-white p-8 md:p-12">
+    <div class="flex items-center bg-black text-white p-8 md:p-12 lg:p-16">
       <div>
-        <h2 class="text-3xl font-bold mb-4">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 leading-tight">
           Ready To Start<br />Your New Career
         </h2>
-        <p class="text-white/90 mb-6">
+        <p class="text-white/90 mb-8 text-lg leading-relaxed">
           If you're ready for a rewarding new path in life or just to take your career to the next level sign up and get instant access to the #1 PDR course in the world.
         </p>
         <a
           href={enrollUrl}
-          class="bg-gold text-white font-bold px-8 py-3 rounded mt-4 inline-block hover:opacity-90 transition-opacity"
+          class="bg-gold text-white font-semibold uppercase text-base px-8 py-3 rounded inline-block tracking-wider hover:bg-[#f98608] transition-colors"
         >
           Enroll Now
         </a>

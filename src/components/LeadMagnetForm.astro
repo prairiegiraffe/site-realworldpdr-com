@@ -1,19 +1,19 @@
 ---
 ---
 
-<section class="bg-[#f5f5f5] py-16 px-4">
+<section class="py-20 md:py-28 px-4" id="contact">
   <div class="max-w-6xl mx-auto">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
       <div>
         <img
           src="https://devtools.prairiegiraffe.com/api/files/sites/proj_dkm43vn7/1776723863099/assets/mo7rijlhw0ofux.png"
           alt="The Tools You Need To Launch Your PDR Career guide"
-          class="w-full"
+          class="w-full max-w-lg mx-auto"
           loading="lazy"
         />
       </div>
 
-      <div>
+      <div class="md:pr-10 md:pl-10">
         <h2 class="text-2xl md:text-3xl font-bold text-black mb-4">
           Download our free resource: The Tools You Need To Launch Your PDR Career
         </h2>
@@ -42,30 +42,32 @@
           </li>
         </ul>
 
-        <form>
-          <div class="mb-4">
+        <form name="Tool List Subscribe">
+          <div class="mb-3">
             <label for="lead-name" class="block text-sm font-bold text-black mb-1">Name</label>
             <input
               type="text"
               id="lead-name"
               name="name"
               placeholder="First Name"
-              class="w-full border border-gray-300 rounded px-4 py-2"
+              required
+              class="w-full border border-gray-300 rounded px-4 py-2 text-gray-body"
             />
           </div>
-          <div class="mb-4">
+          <div class="mb-3">
             <label for="lead-email" class="block text-sm font-bold text-black mb-1">Email</label>
             <input
               type="email"
               id="lead-email"
               name="email"
               placeholder="Email"
-              class="w-full border border-gray-300 rounded px-4 py-2"
+              required
+              class="w-full border border-gray-300 rounded px-4 py-2 text-gray-body"
             />
           </div>
           <button
             type="submit"
-            class="bg-gold text-white font-bold uppercase w-full py-3 rounded hover:opacity-90 transition-opacity"
+            class="bg-[#F6DB0F] text-white font-bold uppercase w-full py-3 rounded hover:bg-[#f98608] transition-colors"
           >
             Send Me the Guide!
           </button>
@@ -74,3 +76,10 @@
     </div>
   </div>
 </section>
+
+<!-- SVG shape divider into footer -->
+<div class="relative">
+  <svg class="w-full block" viewBox="0 0 1000 100" preserveAspectRatio="none" style="transform: translateX(-50%) rotateY(180deg); position: relative; left: 50%;">
+    <path d="M0,6V0h1000v100L0,6z" fill="#E5CA00"></path>
+  </svg>
+</div>
