@@ -1,6 +1,7 @@
 ---
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
+import YouTubeTestimonial from '../components/YouTubeTestimonial.astro';
 
 interface Props {
   title: string;
@@ -23,6 +24,7 @@ const { title, description = 'Real World PDR - The Best Online PDR Training Avai
   <body class="font-body text-gray-body bg-white">
     <SiteHeader />
     <slot />
+    <YouTubeTestimonial />
     <SiteFooter />
   </body>
 </html>

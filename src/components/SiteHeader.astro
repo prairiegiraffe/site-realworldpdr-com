@@ -1,7 +1,7 @@
 ---
 ---
 
-<header class="bg-white py-4 px-4 md:px-8 relative z-50">
+<header class="bg-white py-4 px-4 md:px-8 relative z-50 border-b border-gray-100">
   <div class="flex justify-between items-center max-w-7xl mx-auto">
     <!-- Logo -->
     <a href="/" class="shrink-0">
@@ -13,23 +13,65 @@
     </a>
 
     <!-- Desktop Nav -->
-    <div class="hidden md:flex items-center gap-6">
+    <nav class="hidden lg:flex items-center gap-8">
+      <!-- PDR Courses Dropdown -->
+      <div class="relative group">
+        <button class="flex items-center gap-1 text-black font-bold uppercase text-sm tracking-wide hover:opacity-80">
+          PDR Courses
+          <svg class="w-3.5 h-3.5 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div class="absolute top-full left-0 pt-2 hidden group-hover:block z-50">
+          <div class="bg-white shadow-lg rounded-lg border border-gray-100 py-2 min-w-[220px]">
+            <a href="/real-world-pdr-courses" class="block px-4 py-2.5 text-sm text-gray-body hover:text-black hover:bg-gray-50 font-medium">
+              All Courses
+            </a>
+            <a href="/pdr-ultimate" class="block px-4 py-2.5 text-sm text-gray-body hover:text-black hover:bg-gray-50 font-medium">
+              PDR Monthly
+            </a>
+            <a href="/pdr-101" class="block px-4 py-2.5 text-sm text-gray-body hover:text-black hover:bg-gray-50 font-medium">
+              PDR 101
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- In-Person Training -->
+      <a
+        href="/real-world-prd"
+        class="text-black font-bold uppercase text-sm tracking-wide hover:opacity-80"
+      >
+        In-Person Training
+      </a>
+
+      <!-- Contact -->
+      <a
+        href="#contact"
+        class="text-black font-bold uppercase text-sm tracking-wide hover:opacity-80"
+      >
+        Contact Us
+      </a>
+
+      <!-- Log In -->
       <a
         href="https://realworldpdr.thinkific.com/users/sign_in"
         class="text-black font-bold uppercase text-sm tracking-wide hover:opacity-80"
       >
         Log In
       </a>
+
+      <!-- CTA -->
       <a
         href="https://realworldpdr.thinkific.com/cart/add_product/446304?price_id=467664"
-        class="bg-gold text-white font-bold uppercase text-sm px-5 py-2 rounded hover:opacity-90 inline-block"
+        class="bg-gold text-white font-bold uppercase text-sm px-5 py-2.5 rounded hover:bg-[#f98608] transition-colors inline-block"
       >
-        Subscribe to PDR Ultimate
+        Subscribe to PDR Monthly
       </a>
-    </div>
+    </nav>
 
     <!-- Mobile: Log In + Hamburger -->
-    <div class="flex items-center gap-4 md:hidden">
+    <div class="flex items-center gap-4 lg:hidden">
       <a
         href="https://realworldpdr.thinkific.com/users/sign_in"
         class="text-black font-bold uppercase text-sm tracking-wide hover:opacity-80"
@@ -53,7 +95,7 @@
   <!-- Mobile Dropdown Nav -->
   <nav
     id="mobile-nav"
-    class="hidden md:hidden absolute left-0 right-0 top-full bg-white shadow-lg border-t border-gray-100 z-40"
+    class="hidden lg:hidden absolute left-0 right-0 top-full bg-white shadow-lg border-t border-gray-100 z-40"
   >
     <ul class="flex flex-col py-4 px-4">
       <!-- PDR Courses with sub-items -->
@@ -87,6 +129,11 @@
         </ul>
       </li>
       <li>
+        <a href="/real-world-prd" class="block py-3 text-black font-bold uppercase text-sm tracking-wide hover:opacity-80">
+          In-Person Training
+        </a>
+      </li>
+      <li>
         <a href="#contact" class="block py-3 text-black font-bold uppercase text-sm tracking-wide hover:opacity-80">
           Contact Us
         </a>
@@ -102,9 +149,9 @@
       <li class="pt-2">
         <a
           href="https://realworldpdr.thinkific.com/cart/add_product/446304?price_id=467664"
-          class="block text-center bg-gold text-white font-bold uppercase text-sm px-5 py-3 rounded hover:opacity-90"
+          class="block text-center bg-gold text-white font-bold uppercase text-sm px-5 py-3 rounded hover:bg-[#f98608] transition-colors"
         >
-          Subscribe to PDR Ultimate
+          Subscribe to PDR Monthly
         </a>
       </li>
     </ul>
